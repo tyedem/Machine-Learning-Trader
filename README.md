@@ -12,7 +12,7 @@ YFinance
 
 ## Libraries
 
-pandas, numpy, hvplot, matplotlib, sklearn, finta, yfinance
+This project requires the pandas, numpy, hvplot, matplotlib, sklearn, finta, yfinance libraries.
 
 ## Contributors
 

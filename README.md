@@ -58,6 +58,16 @@ While coding our notebook we rotated through several different models, including
 ​
 The support vector classifier performed the best, with accuracy scores ranging for the four stocks in the 49% to 56%, so we selected it for our algorithm.
 
+# Hyperparameter Optimization/Tuning
+
+Hyperparameter optimization (HPO) is the process by which we aim to improve the performance of a model by choosing the right set of hyperparameters. Some Hyperparameter Examples: criterion max_depth min_samples_split
+
+Grid Search In grid search, we try every combination of the set of hyperparameters that the user-specified. Grid search is implemented in scikit-learn under the name of GridSearchCV Grod Search should be used if the model you are tuning does not have too many parameters, or if you don’t have too much training data.
+
+In HPO, we generally : Select a set of hyperparameters to test Train a model with those hyperparameters on validation data Evaluate the performance of the model Move on to the next set of hyperparameters Keep the hyperparameters which improve the performance the most
+
+#Hyperperameter Algorithm:Grid search #Random Forest from sklearn.model_selection import GridSearchCV
+
 # Plots
 ## Closing Prices
 

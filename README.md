@@ -34,6 +34,30 @@ Our DMAC strategy was designed with a short simple moving average (SMA) window o
 
 Since generating trade signals is a classification problem, we needed to implement supervised learning to our algorithmic machine learning (ML) strategy. The features utilized for our models include the finta library to efficiently calculate a number of indicators and include them into our portfolio DataFrame with open, high, low, close values. A few sklearn ML models were explored including the Random Forest Classifier, the Voting Classifer and the Support Vector Machine Classifier.
 
+# Model Training Process
+---
+## Feature Engineering with finta library
+---
+The finta library was an easy way to add additional features in the form of mathematically calculated technical indicators. Taking as an argument a pandas dataframe with open, high, low, close data, finta returns a column with the results of the calculation. For many of the technical indicators, an optional integer argument can be passed in order to change the period of the calculation, e.g. 5-day moving average or 10-day moving average.
+​
+![Feature Engineering](Images/finta_snippet.png)
+​
+---
+## Fitting and transforming with StandardScaler()
+---
+We used StandardScaler to scale the data and then separated the data into training and test groups. We didn't use train_test_split and ran into one unintended consequence that we caught when debugging our script:
+​
+![Fitting](Images/split_bug.png)
+​
+Our data is based on trading days, while our use of DateOffset was considering calendar days. We fixed this by using the month instead.
+​
+---
+## Model selection
+---
+While coding our notebook we rotated through several different models, including Random Forest Classifier, Logistic Regression, and Support Vector Classifier. Since our label was based on stock price direction, we understood that a given model might not be better than random chance at making predictions. 
+​
+The support vector classifier performed the best, with accuracy scores ranging for the four stocks in the 49% to 56%, so we selected it for our algorithm.
+
 # Plots
 ## Closing Prices
 

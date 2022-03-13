@@ -1,3 +1,5 @@
+Hyperparameter Optimization/Tuning
+
 Hyperparameter optimization (HPO) is the process by which we aim to improve the performance of a model by choosing the right set of hyperparameters.
 Some Hyperparameter Examples:
 criterion

@@ -4,11 +4,11 @@
 
 ## Scope and Purpose
 
-Our priject is to build an algorithmic machine learning trading bot. 
+Our project is to build an algorithmic machine learning trading bot. 
 The goal of this project is to build a predictive model into an algorithmic strategy utilizing technical indicators as well as hyperparameter tuning. 
 
-## Data Sources
-YFinance
+## Data Source
+Yahoo Finance
 
 ## Libraries
 
@@ -28,34 +28,40 @@ Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Clauda Martinez (brilliantlyc)
 
 # Summary Report
 ---
-For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [insert source]. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CI.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning algorithmic strategy returns. Overall performance is captured in the plots above.
+For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [insert source]. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CI.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
 
 Our DMAC strategy was designed with a short simple moving average (SMA) window of 50 days and a long window of 100 days. These values were selected due to their common use amongst traders.
 
-Since generating trade signals is a classification problem, we needed to implement supervised learning to our algorithmic machine learning (ML) strategy. The features utilized for our models include the finta library to efficiently calculate a number of indicators and include them into our portfolio DataFrame with open, high, low, close values. A few sklearn ML models were explored including the Random Forest Classifier, the Voting Classifer and the Support Vector Machine Classifier.
+Since generating trade signals is a classification problem, we needed to implement supervised learning to our Algo ML strategy. The features utilized for our models include the finta library to efficiently calculate a number of indicators and include them into our portfolio DataFrame with open, high, low, close values obtained from Yahoo Finance. A few sklearn ML models were explored including the Random Forest Classifier, the Voting Classifer and the Support Vector Machine Classifier.
+
+Overall, the DMAC strategy outperforms both the actual portfolio returns and the algorithmic strategy returns when comparing total percent returns for the ML models prediction period of March 2021 - March 2022. Performance differences are captured below.
+
+## Total % Returns - March 2021 - March 2022
+
+![total-returns](Metrics/actual_sum_returns.png) ![dmac-returns](Metrics/dmac_sum_returns.png) ![algo-returns](Metrics/algo_sum_returns.png)
 
 # Model Training Process
 ---
 ## Feature Engineering with finta library
 ---
 The finta library was an easy way to add additional features in the form of mathematically calculated technical indicators. Taking as an argument a pandas dataframe with open, high, low, close data, finta returns a column with the results of the calculation. For many of the technical indicators, an optional integer argument can be passed in order to change the period of the calculation, e.g. 5-day moving average or 10-day moving average.
-​
+
 ![Feature Engineering](Images/finta_snippet.png)
-​
+
 ---
 ## Fitting and transforming with StandardScaler()
 ---
 We used StandardScaler to scale the data and then separated the data into training and test groups. We didn't use train_test_split and ran into one unintended consequence that we caught when debugging our script:
-​
+
 ![Fitting](Images/split_bug.png)
-​
+
 Our data is based on trading days, while our use of DateOffset was considering calendar days. We fixed this by using the month instead.
-​
+
 ---
 ## Model selection
 ---
 While coding our notebook we rotated through several different models, including Random Forest Classifier, Logistic Regression, and Support Vector Classifier. Since our label was based on stock price direction, we understood that a given model might not be better than random chance at making predictions. 
-​
+
 The support vector classifier performed the best, with accuracy scores ranging for the four stocks in the 49% to 56%, so we selected it for our algorithm.
 
 # Hyperparameter Optimization/Tuning
@@ -78,7 +84,7 @@ In HPO, we generally : Select a set of hyperparameters to test Train a model wit
 
 ## Returns Distribution
 
-![Returns-distribution](Plots/actual_returns_distribution.png)
+![Returns-distribution](Plots/actual_returns_distribution2.png)
 
 ## DMAC Strategy
 ![Returns-distribution](Plots/DMAC_returns_distribution.png)
@@ -88,7 +94,5 @@ In HPO, we generally : Select a set of hyperparameters to test Train a model wit
 
 # Metrics
 
-## Performance Total % Returns - March 2021 - March 2022
 
-![total-returns](Metrics/actual_sum_returns.png) ![dmac-returns](Metrics/dmac_sum_returns.png) ![algo-returns](Metrics/algo_sum_returns.png)
 

@@ -38,7 +38,7 @@ Overall, the DMAC strategy outperforms both the actual portfolio returns and the
 
 ## Total % Returns - March 2021 - March 2022
 
-![total-returns](Metrics/actual_sum_returns.png) ![dmac-returns](Metrics/dmac_sum_returns.png) ![algo-returns](Metrics/algo_sum_returns.png)
+![total-returns](Metrics/Actual_sum_returns.png) ![dmac-returns](Metrics/DMAC_sum_returns.png) ![algo-returns](Metrics/Algo_sum_returns.png)
 
 # Model Training Process
 ---

@@ -31,7 +31,7 @@ Next, we consider the zero one loss for the stocks and these values reiterate th
 
 **Zero One Loss Subsets Count**
 
-Following is the screenshot of the count of the imperfectly predicted subsets considered in the zero one loss metric. This just shows how the CIX.TO stock which had the highest zero one loss value indeed has a higher count of imperfectly predicted subsets. Also, we can obtain the zero one loss using the values below and dividing by the support value in the classification report for each respective stock.
+Following is the screenshot of the count of the imperfectly predicted subsets considered in the zero one loss metric. This just shows how the CIX.TO stock which had the highest zero one loss value indeed had a higher count of imperfectly predicted subsets. Also, we can obtain the zero one loss using the values below and dividing by the support value in the classification report for each respective stock.
 
 ![svm_zero_one_Loss_subset_count](Metrics/svm_zero_one_Loss_subset_count.png)
 
@@ -43,7 +43,7 @@ As can be seen from the matthews correlation coefficients below, the model perfo
 
 **ROC Curve**
 
-The ROC Curves below show what the above metrics have already shown, and that is that the model performance was not that good since the model was able to predict pretty much at random or slightly worse. The dashed blue line in the random performance line, and AUC for most stock is 0.50.
+The ROC Curves below show what the above metrics have already shown, and that is that the model performance was not that good since the model was able to predict pretty much at random or slightly worse. The dashed blue line is the random performance line, and AUC for most stocks was 0.50.
 
 ![L_svm_ROC_curve](Plots/L_svm_ROC_curve.png)
 
@@ -55,7 +55,9 @@ The ROC Curves below show what the above metrics have already shown, and that is
 
 **Summary**
 
-The following screenshot shows the metrics together in one tabular form. In summary, the one stock that performed the best using our model was the L.TO stock. But there was not much difference between all the stocks. The model did not perform so well as it was very close to a random prediction.  
+The following screenshots show the metrics together in one tabular form and the mean values of the metrics. In summary, the one stock that performed the best using our model was the L.TO stock. But there was not much difference between all the stocks. The model did not perform so well as it was very close to a random prediction.  
 
 ![svm_model_eval_metrics_df](Metrics/svm_model_eval_metrics_df.png)
+
+![svm_model_eval_metrics_means](Metrics/svm_model_eval_metrics_means.png)
 

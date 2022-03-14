@@ -16,7 +16,7 @@ This project requires the pandas, numpy, hvplot, matplotlib, sklearn, finta, yfi
 
 ## Contributors
 
-Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Clauda Martinez (brilliantlyc), Khalid Romain (krom17), Atousa Mirzaei-Rezaei (atoosa-m)
+Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Claudia Martinez (brilliantlyc), Khalid Romain (krom17), Atousa Mirzaei-Rezaei (atoosa-m)
 
 
 # Final Model - Support Vector Machines vs. DMAC Strategy vs. Actual Returns

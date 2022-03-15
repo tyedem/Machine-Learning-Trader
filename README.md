@@ -28,7 +28,7 @@ Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Claudia Martinez (brilliantlyc
 
 # Summary Report
 ---
-For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per as per [Morning Star Direct](https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx)<a href=https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx></a>. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
+For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [Morning Star Direct](https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx)<a href=https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx></a>. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
 
 Our DMAC strategy was designed with a short simple moving average (SMA) window of 50 days and a long window of 100 days. These values were selected due to their common use amongst traders.
 
@@ -81,7 +81,7 @@ The Classification Report includes information on the precision, recall, f1-scor
 
 **Classification Reports**
 
-Following are the classification reports for the 4 stocks analyzed in our project. The L.To stock had the best accuracy, precision, and f1-score and the CIX.TO stock performed the worst using our model and algorithm. However, overall it is evident that the model itself did not do so well at producing good results for the 4 stocks.
+Following are the classification reports for the 4 stocks analyzed in our project. The L.TO stock had the best accuracy, precision, and f1-score and the CIX.TO stock performed the worst using our model and algorithm. However, overall it is evident that the model itself did not do so well at producing good results for the 4 stocks.
 
 ![L_svm_classification](Metrics/L_svm_classification.png)
 
@@ -93,7 +93,7 @@ Following are the classification reports for the 4 stocks analyzed in our projec
 
 **Zero One Loss**
 
-Next, we consider the zero one loss for the stocks and these values reiterate the results from the classification report which show that the L.TO stock did the best while the CIX.TO stock performed the worst. A lower zero one loss value is preffered.
+Next, we consider the zero one loss for the stocks and these values reiterate the results from the classification report which show that the L.TO stock did the best while the CIX.TO stock performed the worst. A lower zero one loss value is preferred.
 
 ![svm_zero_one_loss_scores](Metrics/svm_zero_one_loss_scores.png)
 
@@ -105,7 +105,7 @@ Following is the screenshot of the count of the imperfectly predicted subsets co
 
 **Matthews Correlation Coefficient**
 
-As can be seen from the matthews correlation coefficients below, the model performance for most stocks was average random since the coefficient was 0. The CIX.TO stock is a little below zero making it a slightly inverse prediction.   
+As can be seen from the Matthews correlation coefficients below, the model performance for most stocks was average random since the coefficient was 0. The CIX.TO stock is a little below zero making it a slightly inverse prediction.   
 
 ![matthews_corr_coef](Metrics/matthews_corr_coef.png)
 
@@ -131,9 +131,9 @@ The following screenshot shows the metrics together in one tabular form. In summ
 
 Hyperparameter optimization (HPO) is the process by which we aim to improve the performance of a model by choosing the right set of hyperparameters. Some Hyperparameter Examples: criterion max_depth min_samples_split
 
-Grid Search In grid search, we try every combination of the set of hyperparameters that the user-specified. Grid search is implemented in scikit-learn under the name of GridSearchCV Grod Search should be used if the model you are tuning does not have too many parameters, or if you don’t have too much training data.
+Grid Search In grid search, we try every combination of the set of hyperparameters that the user-specified. Grid search is implemented in scikit-learn under the name of GridSearchCV Grid Search should be used if the model you are tuning does not have too many parameters, or if you don’t have too much training data.
 
-In HPO, we generally : Select a set of hyperparameters to test Train a model with those hyperparameters on validation data Evaluate the performance of the model Move on to the next set of hyperparameters Keep the hyperparameters which improve the performance the most
+In HPO, we generally, select a set of hyperparameters to test/train a model with those hyperparameters on validation data, evaluate the performance of the model, then move on to the next set of hyperparameters. We keep the hyperparameters which improve the performance the most
 
 #Hyperperameter Algorithm:Grid search #Random Forest from sklearn.model_selection import GridSearchCV
 
@@ -154,6 +154,3 @@ In HPO, we generally : Select a set of hyperparameters to test Train a model wit
 
 ## Algo Strategy
 ![Returns-distribution](Plots/algo_returns_distribution.png)
-
-
-

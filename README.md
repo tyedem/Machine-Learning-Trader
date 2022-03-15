@@ -133,9 +133,11 @@ Hyperparameter optimization (HPO) is the process by which we aim to improve the 
 
 Grid Search In grid search, we try every combination of the set of hyperparameters that the user-specified. Grid search is implemented in scikit-learn under the name of GridSearchCV Grid Search should be used if the model you are tuning does not have too many parameters, or if you don’t have too much training data.
 
-In HPO, we generally, select a set of hyperparameters to test/train a model with those hyperparameters on validation data, evaluate the performance of the model, then move on to the next set of hyperparameters. We keep the hyperparameters which improve the performance the most
+In HPO, we generally, select a set of hyperparameters to test/train a model with those hyperparameters on validation data, evaluate the performance of the model, then move on to the next set of hyperparameters. We keep the hyperparameters which improve the performance the most.
 
-#Hyperperameter Algorithm:Grid search #Random Forest from sklearn.model_selection import GridSearchCV
+The model produced better accuracy scores before Hyperperameter tuning was implemented. Therefore, Hyperperameter tuning did not help to improve the performance of the model.
+
+
 
 # Plots
 ## Closing Prices

@@ -28,7 +28,7 @@ Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Claudia Martinez (brilliantlyc
 
 # Summary Report
 ---
-For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [insert source]. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
+For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per as per [Morning Star Direct](https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx)<a href=https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx></a>. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
 
 Our DMAC strategy was designed with a short simple moving average (SMA) window of 50 days and a long window of 100 days. These values were selected due to their common use amongst traders.
 

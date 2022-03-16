@@ -7,8 +7,9 @@
 Our project is to build an algorithmic machine learning trading bot. 
 The goal of this project is to build a predictive model into an algorithmic strategy utilizing technical indicators as well as hyperparameter tuning. 
 
-## Data Source
-Yahoo Finance
+## Data Source  
+
+Yahoo Finance  
 
 ## Libraries
 
@@ -28,7 +29,7 @@ Tyeson Demets (tyedem), Trevor Yeomans (Yu9Psx2), Claudia Martinez (brilliantlyc
 
 # Summary Report
 ---
-For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [Morning Star Direct](https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx)<a href=https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx></a>. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
+For this project, we decided to select some of Canada's best performing stocks in the Toronto Stock Exchange (TSX), as per [Morning Star Direct](https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx)<a href=https://www.morningstar.ca/ca/news/217522/10-top-performing-canadian-stocks-in-2021.aspx></a>. The chosen stocks include Loblaws (L.TO), Bank of Montreal (BMO.TO), Thomson Reuters Corp. (TRI.TO) and CI Financial (CIX.TO). We pulled the data from yfinance for the period between January 1st, 2019 to March 3rd, 2022. No major data cleaning was necessary as the data collected was in good shape. We assigned each stock's closing prices to a separate dataframe and then exported the dataframes to four CSV files. Our backtesting process includes designing a dual moving average crossover strategy (DMAC) to compare the performance with the actual market returns and the machine learning (ML) algorithmic (Algo) strategy returns. Overall performance is captured in the plots above.
 
 Our DMAC strategy was designed with a short simple moving average (SMA) window of 50 days and a long window of 100 days. These values were selected due to their common use amongst traders.
 

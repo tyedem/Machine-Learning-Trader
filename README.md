@@ -123,9 +123,12 @@ The ROC Curves below show what the above metrics have already shown, and that is
 
 **Summary**
 
-The following screenshot shows the metrics together in one tabular form. In summary, the one stock that performed the best using our model was the L.TO stock. But there was not much difference between all the stocks. The model did not perform so well as it was very close to a random prediction.  
+The following screenshots show the metrics together in one tabular form (precision, recall, and f1-score is that of the label 1) and the mean values of the metrics. In summary, the one stock that performed the best using our model was the L.TO stock. But there was not much difference between all the stocks. The model did not perform so well as it was very close to a random prediction with an accuray of 0.53 which is slightly above random.  
 
 ![svm_model_eval_metrics_df](Metrics/svm_model_eval_metrics_df.png)
+
+![svm_model_eval_metrics_means](Metrics/svm_model_eval_metrics_means.png)
+
 
 # Hyperparameter Optimization/Tuning
 
